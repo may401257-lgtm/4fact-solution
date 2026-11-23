@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="LTE·Wi-Fi 기반 실시간 바디캠 통합 관제 솔루션, 4FACT VMS">
+<meta name="theme-color" content="#111111">
+<title>4FACT VMS | 통합 관제 솔루션</title>
+<link rel="canonical" href="https://solution.4fact.kr/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://solution.4fact.kr/">
+<meta property="og:title" content="4FACT VMS | 통합 관제 솔루션">
+<meta property="og:description" content="LTE·Wi-Fi 기반 실시간 바디캠 통합 관제 솔루션, 4FACT VMS">
+<meta property="og:image" content="https://solution.4fact.kr/images/hero-devices-hires.jpg">
+<link rel="icon" href="images/4fact-logo-final.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+:root{--bg:#111;--panel:#202020;--panel2:#292929;--line:#303030;--text:#f7f4f1;--muted:#aaa39e;--orange:#ff7700;--cream:#f7e8de;--ink:#1b1714;--max:1120px}
+.eyebrow{font-family:"Outfit",sans-serif;font-size:10px;font-weight:600;letter-spacing:0;line-height:1.3;text-transform:none;color:var(--orange);display:inline-block}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var(--bg);color:var(--text);font-family:"Pretendard",Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 48px));margin:auto}
+.header{height:72px;position:sticky;top:0;z-index:30;background:rgba(16,16,16,.92);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;width:73.6px;line-height:0}.logo img{display:block;width:100%;height:auto;object-fit:contain}.navlinks{display:flex;gap:28px;align-items:center;font-size:13px;color:#ddd}.navlinks a:hover{color:var(--orange)}.navbtn{border:1px solid #66513e;border-radius:30px;padding:9px 16px;font-size:12px}.menu{display:none;background:none;border:0;color:white;font-size:24px}
+.hero{background:#fff;color:white;text-align:center;overflow:hidden;padding:0}
+.hero-art{width:100%;max-width:none;height:calc(clamp(900px,58vw,1120px) + 50px);margin:0 auto;position:relative;overflow:hidden}
+.hero-art img{position:absolute;top:-270px;left:0;width:100%;height:auto;min-height:0;display:block;object-fit:initial;object-position:top center}
+.hero-copy{position:absolute;top:calc(6.5% - 3px);left:5%;right:5%;text-align:center;color:#fff;}
+.hero-kicker{display:block;font-size:clamp(15px,2vw,25px);font-weight:700;line-height:1.4}
+.hero-copy h1{font-size:clamp(42px,6.2vw,78px);line-height:1.2;letter-spacing:0;margin:4.2% 0 0;font-weight:800;transform:translateY(-40px)}
+.hero-copy p{font-size:clamp(15px,2vw,25px);line-height:1.65;margin:3.2% 0 0;font-weight:400;transform:translateY(-70px)}
+.hero .hero-actions{display:flex;justify-content:center;gap:10px;margin:34px 0 0;padding:0;background:transparent;transform:translateY(-60px)}
+.actions{display:flex;justify-content:center;gap:10px;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 21px;border-radius:30px;font-size:13px;font-weight:800}.btn.dark{background:#151515;color:#fff}.btn.light{background:#fff2e8;color:#211710}
+.section{padding:100px 0}.head{text-align:center;max-width:700px;margin:0 auto 42px}.head h2{font-size:clamp(28px,4vw,42px);line-height:1.25;letter-spacing:-.05em;margin:10px 0 14px}.head p{font-size:14px;color:var(--muted);margin:0}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{padding:24px;background:linear-gradient(145deg,#262626,#1b1b1b);border:1px solid #333;border-radius:14px}.ico{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#3a2a1e;color:var(--orange);font-size:22px;margin-bottom:16px}.feature h3{font-size:17px;margin:0 0 7px}.feature p{font-size:13px;color:#aaa;margin:0}.pill{display:flex;width:max-content;max-width:100%;align-items:center;justify-content:center;gap:8px;margin:30px auto 0;background:var(--cream);color:#211914;border-radius:50px;padding:13px 24px;font-size:13px;font-weight:800}.pill b{background:var(--orange);color:white;border-radius:5px;padding:3px 8px}
+.steps{max-width:850px;margin:auto;display:grid;gap:13px}.step{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;padding:22px 26px;background:#202020;border:1px solid #303030;border-radius:13px}.step small{font:700 10px "Outfit",sans-serif;color:var(--orange);letter-spacing:.14em}.step h3{font-size:18px;margin:5px 0 0}.step p{font-size:13px;color:#aaa;margin:0}
+.visual{max-width:1000px;margin:0 auto}.visual img{display:block;width:100%;height:auto;border-radius:14px}.visual-card{background:#1b1b1b;border:1px solid #303030;border-radius:15px;padding:0;overflow:hidden}.visual-caption{color:#aaa;font-size:12px;text-align:center;margin:12px 0 0}
+.ai-image{max-width:1000px;margin:auto}.ai-image img{width:100%;height:auto;display:block;border-radius:13px}
+.light-panel{background:var(--cream);color:var(--ink);border-radius:18px;padding:54px 32px}.light-panel .head p{color:#6e625b}.light-panel .eyebrow{color:#ff7700}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center}.info{background:#202020;border:1px solid #303030;border-radius:14px;padding:24px}.info h3{font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.25;letter-spacing:-.05em;margin:10px 0 14px}.info p{font-size:13px;color:#aaa;margin:0}.info img{width:100%;display:block;border-radius:10px}
+.location-info{background:transparent;border:0}
+.location-blank{aspect-ratio:5 / 3}
+.section .container.two:has(.location-info){grid-template-columns:0.73913fr 1fr}
+
+.license{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:850px;margin:24px auto 0}.license-card{background:#202020;border:1px solid #333;border-radius:12px;padding:20px;text-align:left}.license-card small{color:#aaa}.license-card strong{display:block;color:var(--orange);font-size:23px;margin-top:7px}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:850px;margin:35px auto 0}.price{background:#202020;border:1px solid #333;border-radius:12px;padding:22px;text-align:left}.price small{color:#aaa}.price strong{display:block;color:var(--orange);font-size:24px;margin-top:8px}.price span{font-size:12px;color:#888}
+.contact{max-width:800px;margin:48px auto 0;padding:38px 22px;text-align:center;background:linear-gradient(120deg,#f9dfd0,#f1c7ae);color:#211914;border-radius:20px}.contact h2{font-size:clamp(25px,4vw,34px);line-height:1.3;margin:8px 0}.contact p{color:#6b594f;font-size:13px}.contact .eyebrow{color:#ff7700}
+footer{border-top:1px solid #292929;padding:28px 0;color:#777;font-size:11px}.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+@media(max-width:760px){.container{width:calc(100% - 34px)}.header{height:62px}.navlinks{display:none;position:absolute;top:62px;left:0;right:0;background:#151515;padding:20px 24px;flex-direction:column;align-items:flex-start;gap:16px}.navlinks.open{display:flex}.navbtn{display:none}.menu{display:block}.hero{padding:0;background:#fff}.hero-art{height:780px;margin:0 auto}.hero-art img{position:absolute;top:-270px;left:0;width:100%;height:auto;min-height:0;display:block;object-fit:initial;object-position:top center}.hero .hero-actions{margin-top:24px;gap:8px;transform:translateY(-60px)}.hero-copy{top:6%}.hero-kicker{font-size:clamp(11px,3.2vw,15px)}.hero-copy h1{font-size:clamp(27px,7.8vw,42px);margin-top:4%}.hero-copy p{font-size:clamp(10px,2.9vw,15px);margin-top:3%;line-height:1.55}.section{padding:72px 0}.head{margin-bottom:32px}.feature-grid,.pricing{grid-template-columns:1fr}.step{grid-template-columns:1fr;gap:7px;padding:20px}.light-panel{padding:38px 17px}.two,.license{grid-template-columns:1fr}.pill{font-size:12px;padding:12px 17px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Typography scale refinement v5 */
+body{font-size:16px;line-height:1.75}
+.navlinks{font-size:14px}
+.navbtn{font-size:13px}
+.eyebrow{font-size:11px;letter-spacing:0;text-transform:none}
+.hero-copy h1{font-size:clamp(42px,6.2vw,78px);line-height:1.2;letter-spacing:0;margin:4.2% 0 0;font-weight:800;transform:translateY(-40px)}
+.hero-copy p{font-size:clamp(15px,2vw,25px);line-height:1.65;margin:3.2% 0 0;font-weight:400;transform:translateY(-70px)}
+.btn{font-size:14px}
+.head h2{font-size:clamp(32px,4.3vw,46px);line-height:1.28}
+.head p{font-size:16px;line-height:1.85}
+.feature h3{font-size:19px}
+.feature p{font-size:15px;line-height:1.8}
+.pill{font-size:14px}
+.step h3{font-size:20px}
+.step p{font-size:15px;line-height:1.8}
+.visual-caption{font-size:13px}
+.info h3{font-size:24px}
+.info p{font-size:15px;line-height:1.8}
+.price small,.license-card small{font-size:13px}
+.price strong,.license-card strong{font-size:26px}
+.price span{font-size:13px}
+.contact h2{font-size:clamp(28px,4.2vw,38px)}
+.contact p{font-size:15px}
+footer{font-size:12px}
+@media(max-width:760px){
+ body{font-size:15px}
+ .navlinks{font-size:15px}
+ .hero-copy h1{font-size:clamp(27px,7.8vw,42px);margin-top:4%}
+ .hero-copy p{font-size:clamp(10px,2.9vw,15px);margin-top:3%;line-height:1.55}
+ .head h2{font-size:clamp(29px,7vw,36px)}
+ .head p{font-size:15px}
+ .feature h3{font-size:18px}
+ .feature p,.step p,.info p{font-size:14px}
+ .step h3{font-size:19px}
+ .info h3{font-size:21px}
+ .price strong,.license-card strong{font-size:24px}
+ .pill{font-size:13px}
+}
+
+</style>
+
+<style id="below-hero-typography">
+/* Typography adjustments for sections below the hero only */
+.section .eyebrow { font-size: 13pt; font-family: "Outfit", sans-serif; font-weight: 500; }
+.section h2 { letter-spacing: 0; }
+</style>
+<style>
+
+/* Layered visual for Live Monitoring: laptop floats beyond the backdrop */
+.monitoring-composite {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 70px auto 120px;
+  isolation: isolate;
+}
+.monitoring-background {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1px solid #303030;
+  border-radius: 18px;
+}
+.monitoring-laptop {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 78%;
+  max-width: none;
+  height: auto;
+  left: 11%;
+  top: -8%;
+  filter: drop-shadow(0 18px 24px rgba(0,0,0,.28));
+  pointer-events: none;
+}
+@media (max-width: 700px) {
+  .monitoring-composite { margin: 48px auto 78px; }
+  .monitoring-background { border-radius: 12px; }
+  .monitoring-laptop { width: 88%; left: 6%; top: -5%; }
+}
+
+</style>
+<style>
+
+/* AI Video Analysis: two empty image slots awaiting supplied visuals */
+.ai-image-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.ai-image-placeholder {
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
+  background: #242424;
+  border: 1px solid #3a3a3a;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.ai-image-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 700px) {
+  .ai-image-grid { grid-template-columns: 1fr; gap: 14px; }
+  .ai-image-placeholder { aspect-ratio: 1.5 / 1; border-radius: 12px; }
+}
+
+</style>
+
+<style>
+/* Mobile Monitoring: original-size transparent phone artwork floating over gradient background */
+.mobile-composite {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 824 / 649;
+  margin: 28px auto 0;
+  isolation: isolate;
+}
+.mobile-composite-background {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 18px;
+}
+.mobile-composite-phones {
+  transition: transform 180ms ease-out;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 60%;
+  height: auto;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, var(--phone-scroll-y, 0px));
+  will-change: transform;
+  object-fit: contain;
+  pointer-events: none;
+}
+@media (max-width: 700px) {
+  .mobile-composite { margin: 48px auto 0; }
+  .mobile-composite-background { border-radius: 12px; }
+}
+</style>
+
+
+<style>
+/* Keep Location Tracking heading identical in scale and weight to section headings. */
+.section .container.two .location-info h3 {
+  font-size: clamp(32px, 4.3vw, 46px);
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: -.05em;
+}
+@media (max-width: 760px) {
+  .section .container.two .location-info h3 {
+    font-size: clamp(29px, 7vw, 36px);
+  }
+}
+</style>
+
+
+<style>
+/* Desktop × Mobile: two empty visual slots for future assets */
+.desktop-mobile-grid {
+  max-width: 1200px;
+}
+</style>
+
+
+<style>
+/* Desktop × Mobile: paired cards with copy and image slots */
+.desktop-mobile-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.desktop-mobile-card {
+  min-width: 0;
+  padding: 34px;
+  border-radius: 20px;
+  background: #262626;
+  border: 1px solid #303030;
+  overflow: hidden;
+}
+.desktop-mobile-card h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+.desktop-mobile-card .card-subcopy {
+  display: block;
+  color: var(--orange);
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+.desktop-mobile-card ul {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+}
+.desktop-mobile-card li {
+  position: relative;
+  padding-left: 14px;
+  margin: 7px 0;
+  color: #ddd;
+  font-size: 15px;
+  line-height: 1.65;
+}
+.desktop-mobile-card li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+}
+.desktop-mobile-image-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.47 / 1;
+  height: auto;
+  margin-top: 24px;
+  margin-bottom: -34px;
+  display: block;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.desktop-mobile-image-placeholder img {
+  position: absolute;
+  display: block;
+  height: auto;
+  object-fit: contain;
+  top: 0;
+}
+.desktop-mobile-image-placeholder.desktop-image img {
+  width: 90%;
+  max-width: 615px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.desktop-mobile-image-placeholder.mobile-image img {
+  width: 48.6%;
+  max-width: 318px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 700px) {
+  .desktop-mobile-cards { grid-template-columns: 1fr; gap: 14px; }
+  .desktop-mobile-card { padding: 24px; border-radius: 14px; }
+  /* Keep the same crop window ratio as desktop while scaling with the card. */
+  .desktop-mobile-image-placeholder { aspect-ratio: 1.47 / 1; height: auto; }
+}
+</style>
+
+
+<style id="tablet-monitor-bottom-anchor">
+/* Tablet only: anchor the monitor artwork to the bottom edge of its clipping frame. */
+@media (min-width: 761px) and (max-width: 1032px) {
+  .desktop-mobile-image-placeholder.desktop-image img {
+    top: auto;
+    bottom: 0;
+  }
+}
+</style>
+
+
+<style id="desktop-mobile-responsive-card-alignment">
+/* Keep both visual windows anchored consistently as the two-column cards narrow. */
+.desktop-mobile-cards {
+  align-items: stretch;
+}
+.desktop-mobile-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.desktop-mobile-card ul {
+  flex: 0 0 auto;
+}
+.desktop-mobile-image-placeholder {
+  flex: 0 0 auto;
+  margin-top: auto;
+}
+/* The previous tablet-only offset caused a jump at nearby widths. */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .desktop-mobile-image-placeholder.desktop-image img {
+    top: 0;
+    bottom: auto;
+  }
+}
+</style>
+
+
+
+<style id="interactive-hover-effects">
+/* Subtle hover feedback for desktop pointer devices. */
+@media (hover: hover) and (pointer: fine) {
+  .desktop-mobile-card {
+    transition: background-color .3s ease, border-color .3s ease;
+  }
+  .desktop-mobile-card:hover {
+    background-color: #2d2d2d;
+    border-color: var(--orange);
+  }
+
+  .btn,
+  .navbtn {
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+  }
+  .btn.dark:hover {
+    background-color: var(--orange);
+    color: #fff;
+  }
+  .btn.light:hover {
+    background-color: var(--orange);
+    color: #fff;
+  }
+  .navbtn:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .desktop-mobile-card,
+  .btn,
+  .navbtn {
+    transition: none;
+  }
+}
+</style>
+
+
+
+<style id="feature-card-hover-effects">
+@media (hover: hover) and (pointer: fine) {
+  .feature {
+    transition: background .3s ease, border-color .3s ease;
+  }
+  .feature:hover {
+    background: linear-gradient(145deg, #2d2d2d, #242424);
+    border-color: var(--orange);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .feature {
+    transition: none;
+  }
+}
+</style>
+
+
+<style id="desktop-mobile-card-orange-fill-hover">
+/* Desktop/mobile comparison cards: fill the whole card with orange on hover. */
+@media (hover: hover) and (pointer: fine) {
+  .desktop-mobile-card {
+    transition: background-color .3s ease, border-color .3s ease;
+  }
+  .desktop-mobile-card:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+  }
+  .desktop-mobile-card:hover h3,
+  .desktop-mobile-card:hover li {
+    color: #171717;
+  }
+  .desktop-mobile-card:hover .card-subcopy {
+    color: #fff;
+  }
+  .desktop-mobile-card:hover li::before {
+    color: #fff;
+  }
+  .desktop-mobile-card:hover .eyebrow,
+  .desktop-mobile-card:hover .accent,
+  .desktop-mobile-card:hover [class*="orange"],
+  .desktop-mobile-card:hover [style*="color"] {
+    color: #fff !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .desktop-mobile-card { transition: none; }
+}
+</style>
+
+
+<style id="orange-text-selection">
+::selection {
+  background: #ff7900;
+  color: #fff;
+}
+::-moz-selection {
+  background: #ff7900;
+  color: #fff;
+}
+</style>
+
+<style id="hero-laptop-width-fix">
+/* 노트북 폭(1033~1700)에서 첫 화면 문구가 제품 사진에 겹치지 않게 사진을 내린다 */
+@media (min-width: 1033px) and (max-width: 1700px) {
+  .hero-art > img { top: max(-270px, calc(470px - 46.5vw)); }
+}
+</style>
+</head>
+<body>
+<header class="header"><div class="container nav">
+<a class="logo" href="#top" aria-label="4FACT VMS 홈"><img src="images/4fact-logo-final.png" alt="4FACT VMS"></a>
+<nav class="navlinks" id="links"><a href="#solution">솔루션</a><a href="#system">시스템 구성</a><a href="#monitoring">실시간 관제</a><a href="#ai">AI 영상 분석</a><a href="#mobile">모바일 관제</a><a href="#price">도입 비용</a></nav>
+<a class="navbtn" href="https://www.4fact.co.kr/pages/cs/company_iq.php" target="_blank" rel="noopener noreferrer">도입 문의 ↗</a><button class="menu" id="menu" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+</div></header>
+<main id="top">
+<section class="hero">
+<div class="hero-art">
+<img src="images/hero-devices-hires.jpg" alt="노트북, 스마트폰, 바디캠으로 구성된 4FACT VMS 통합 관제 솔루션">
+<div class="hero-copy">
+<span class="hero-kicker">LTE · Wi-Fi 기반 실시간 바디캠 통합관제 솔루션</span>
+<h1>현장을 실시간으로<br>지휘하다.</h1>
+<p>관제실에서 보고, 듣고, 지시합니다.<br>데스크톱과 모바일에서 같은 현장을 봅니다.</p>
+<div class="actions hero-actions"><a class="btn dark" href="#solution">솔루션 알아보기 ↓</a><a class="btn light" href="https://www.4fact.co.kr/pages/cs/company_iq.php" target="_blank" rel="noopener noreferrer">도입 문의하기 ↗</a></div>
+</div>
+</div>
+</section>
+<section class="section" id="solution"><div class="container">
+<div class="head"><span class="eyebrow">Solution Overview</span><h2>4FACT VMS<br>통합 관제 솔루션</h2><p>현장 작업자의 바디캠 영상이 이동통신망을 통해 클라우드로 전송되고, 관제실에서는 1초 안에 현장을 확인합니다. 영상 확인을 넘어 기기를 원격으로 제어하고, 무전으로 현장에 지시할 수 있습니다. 고정형 CCTV가 닿지 않는 이동 현장까지 관제망으로 연결합니다.</p></div>
+<div class="feature-grid">
+<article class="feature"><div class="ico">◉</div><h3>실시간으로 봅니다.</h3><p>현장의 영상을 실시간으로 확인하고 상황에 빠르게 대응합니다.</p></article>
+<article class="feature"><div class="ico">⚙</div><h3>원격으로 조작합니다.</h3><p>관제 화면에서 연결된 기기를 원격으로 제어하고 관리합니다.</p></article>
+<article class="feature"><div class="ico">◈</div><h3>AI가 먼저 찾습니다.</h3><p>AI 영상 분석으로 주요 상황을 감지하고 필요한 현장을 확인합니다.</p></article>
+</div>
+
+</div></section>
+<section class="section" id="system"><div class="container">
+<div class="head"><span class="eyebrow">System Architecture</span><h2>시스템 구성</h2><p>현장에서 촬영하고, 클라우드로 전송하고, 관제센터에서 제어합니다.<br>촬영부터 관제까지 하나의 시스템으로 연결됩니다.</p></div>
+<div class="steps">
+<article class="step"><div><small>STEP 01</small><h3>현장에서 촬영합니다.</h3></div><p>바디캠 및 현장 단말기를 통해 영상을 촬영하고, LTE·Wi-Fi 네트워크를 이용해 실시간으로 전송합니다.</p></article>
+<article class="step"><div><small>STEP 02</small><h3>클라우드에서 연결합니다.</h3></div><p>전송된 영상과 기기 정보를 클라우드 기반 플랫폼에서 통합 관리하고, 사용자 및 장치 상태를 연결합니다.</p></article>
+<article class="step"><div><small>STEP 03</small><h3>관제센터에서 확인합니다.</h3></div><p>PC와 모바일에서 실시간 영상, 위치 및 기기 상태를 확인하고 필요한 원격 제어를 수행합니다.</p></article>
+</div></div></section>
+<section class="section" id="monitoring"><div class="container">
+<div class="head"><span class="eyebrow">Live Monitoring</span><h2>실시간 관제 · 멀티뷰</h2><p>현장 수와 모니터 수에 맞춰 화면을 자유롭게 구성하고,<br>필요한 현장을 빠르게 확인할 수 있습니다.</p></div>
+<div class="visual visual-card"><img src="images/live-monitoring.jpg" alt="4FACT VMS 실시간 멀티뷰 관제 화면"></div>
+</div></section>
+<section class="section" id="ai"><div class="container">
+<div class="head"><span class="eyebrow">AI Video Analysis</span><h2>AI 영상 분석</h2><p>AI가 위험 상황을 먼저 찾아 관제 화면에 표시합니다.<br>여러 화면을 계속 지켜보지 않아도, 감지가 필요한 현장을 우선적으로 확인할 수 있습니다.</p></div>
+<div class="ai-image ai-image-grid" aria-label="AI 영상 분석 이미지 영역">
+  <div class="ai-image-placeholder" aria-label="AI 영상 분석 이미지 1">
+    <img src="images/ai-analysis-worker.jpg" alt="작업자의 안전조끼 착용 여부를 AI로 감지하는 영상 분석 화면">
+  </div>
+  <div class="ai-image-placeholder" aria-label="AI 영상 분석 이미지 2">
+    <img src="images/ai-analysis-heavy-equipment.jpg" alt="건설 현장에서 중장비 접근 위험을 AI로 감지하는 영상 분석 화면">
+  </div>
+</div>
+</div></section>
+<section class="section"><div class="container">
+<div class="head"><span class="eyebrow">Remote Device Control</span><h2>원격 기기 제어</h2><p>관제센터에서 현장 바디캠을 직접 제어합니다.<br>전원부터 녹화, 촬영, 전송까지 원격으로 설정하고<br>즉시 현장 상황을 확인할 수 있습니다.</p></div>
+<div class="visual visual-card"><img src="images/remote-control.jpg" alt="4FACT VMS 원격 기기 제어 화면"></div>
+</div></section>
+<section class="section"><div class="container two">
+<article class="info location-info"><span class="eyebrow">Location Tracking</span><h3>실시간 위치 · 지도</h3><p>현장 기기의 위치 정보를 지도에서 확인하고, 여러 현장의 위치와 이동 상황을 직관적으로 파악할 수 있습니다.</p></article>
+<div class="visual location-blank"><img src="images/location-map.jpg" alt="실시간 위치 추적 지도와 현장별 영상 모니터링 화면"></div>
+</div></section>
+<section class="section" id="mobile"><div class="container">
+<div class="head"><span class="eyebrow">Mobile Monitoring</span><h2>모바일 관제</h2><p>PC뿐 아니라 모바일에서도 실시간 영상을 확인하고<br>현장 상황을 간편하게 관리할 수 있습니다.</p></div>
+<div class="mobile-composite" aria-label="4FACT VMS 모바일 관제 화면">
+  <img class="mobile-composite-background" src="images/mobile-monitoring-background.jpg" alt="">
+  <img class="mobile-composite-phones" src="images/mobile-monitoring-phones.png" alt="4FACT VMS 모바일 관제 스마트폰 두 대">
+</div>
+</div></section>
+<section class="section"><div class="container">
+<div class="head"><span class="eyebrow">Desktop × Mobile</span><h2>데스크톱 ↔ 모바일</h2><p>관제실에서는 넓은 화면으로 현장을 통합 관리하고,<br>모바일에서는 언제 어디서나 현장 상황에 빠르게 대응합니다.</p></div>
+<div class="desktop-mobile-cards">
+  <article class="desktop-mobile-card">
+    <h3>관제실 · 데스크톱</h3>
+    <strong class="card-subcopy">여러 현장을 한눈에 관리하는 관제 환경</strong>
+    <ul>
+      <li>여러 현장의 영상을 동시에 모니터링합니다.</li>
+      <li>비디오월과 멀티 모니터로 현장을 크게 확인합니다.</li>
+      <li>조직, 사용자 권한, 연결 기기를 통합 관리합니다.</li>
+      <li>장시간 다시보기로 영상을 확인합니다.</li>
+    </ul>
+    <div class="desktop-mobile-image-placeholder desktop-image"><img src="images/desktop-monitor.png" alt="4FACT VMS 데스크톱 관제 모니터"></div>
+  </article>
+  <article class="desktop-mobile-card">
+    <h3>현장 · 모바일</h3>
+    <strong class="card-subcopy">이동 중에도 실시간으로 확인하고 대응하는 환경</strong>
+    <ul>
+      <li>실시간 알림으로 현장 상황을 빠르게 확인합니다.</li>
+      <li>무전에 참여해 현장 작업자에게 즉시 지시합니다.</li>
+      <li>모바일에서 연결 기기의 상태와 기능을 제어합니다.</li>
+      <li>필요한 장면을 확인하고 스냅샷으로 공유합니다.</li>
+    </ul>
+    <div class="desktop-mobile-image-placeholder mobile-image"><img src="images/mobile-phone.png" alt="4FACT VMS 모바일 관제 스마트폰"></div>
+  </article>
+</div>
+</div></section>
+<section class="section" id="price"><div class="container">
+<div class="head"><span class="eyebrow">For Your Act</span><h2>지금 바로 4FACT VMS를<br>도입해 보세요.</h2><p>현장 관제의 새로운 기준,<br>4FACT VMS에 대한 궁금한 점이 있으시면 언제든 문의해 주세요.</p></div>
+<div class="pricing-heading">
+  <div class="pricing-heading-copy">
+    <span class="pricing-overline">Pricing</span>
+    <h3>도입 비용</h3>
+    <p>필요한 관제 기능에 맞춰 요금제를 선택하세요.</p>
+  </div>
+</div>
+<div class="pricing">
+<article class="price">
+  <h3>Basic</h3>
+  <div class="plan-features"><span>실시간 관제</span></div>
+  <div class="price-value"><strong>월 15,000원</strong><span>/ 대</span></div>
+</article>
+<article class="price">
+  <h3>Standard</h3>
+  <div class="plan-features"><span>실시간 관제</span><span>클라우드 녹화</span></div>
+  <div class="price-value"><strong>월 29,000원</strong><span>/ 대</span></div>
+</article>
+<article class="price">
+  <h3>Premium</h3>
+  <div class="plan-features"><span>실시간 관제</span><span>클라우드 녹화</span><span>AI 감지</span></div>
+  <div class="price-value"><strong>월 39,000원</strong><span>/ 대</span></div>
+</article>
+</div>
+<div class="license">
+  <div class="license-heading">
+    <span class="pricing-overline">License Add-ons</span>
+    <h3>관제 라이선스</h3>
+    <p>관제 환경에 따라 필요한 라이선스를 추가할 수 있습니다.</p>
+  </div>
+  <div class="license-grid">
+    <article class="license-card">
+      <div class="license-description">
+        <strong>PC 라이선스</strong>
+        <span>기본 1개 제공 · 동시 16분할</span>
+      </div>
+      <div class="license-price">
+        <strong>월 19,000원</strong>
+        <span>/ 라이선스당</span>
+      </div>
+    </article>
+    <article class="license-card">
+      <div class="license-description">
+        <strong>모바일 라이선스</strong>
+        <span>별도 라이선스</span>
+      </div>
+      <div class="license-price">
+        <strong>월 9,000원</strong>
+        <span>/ 라이선스당</span>
+      </div>
+    </article>
+  </div>
+</div>
+<div class="pricing-notes">
+  <p>* 요금제 가입 시 관제 PC 라이선스 1개 기본 제공(동시 16분할) · 모바일 및 추가 관제 라이선스 별도</p>
+  <p>* 대형 관제실 별도 견적</p>
+</div>
+
+</div></section>
+</main>
+<footer><div class="container foot"><span>© 4FACT CO., LTD. All rights reserved.</span><span>4FACT VMS · Integrated Monitoring Solution</span></div></footer>
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰';});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));
+
+// Subtle phone movement in response to wheel direction; the resting position stays unchanged.
+(() => {
+  const phones = document.querySelector('.mobile-composite-phones');
+  if (!phones) return;
+
+  let resetTimer;
+  const onWheel = (event) => {
+    const offset = event.deltaY > 0 ? -12 : event.deltaY < 0 ? 12 : 0;
+    phones.style.setProperty('--phone-scroll-y', `${offset}px`);
+    window.clearTimeout(resetTimer);
+    resetTimer = window.setTimeout(() => {
+      phones.style.setProperty('--phone-scroll-y', '0px');
+    }, 180);
+  };
+
+  window.addEventListener('wheel', onWheel, { passive: true });
+})();
+</script>
+
+<style id="mobile-hero-layout-only">
+@media (max-width: 760px) {
+  .hero { padding: 0; overflow: hidden; }
+  .hero-art {
+    height: calc(90.9091vw + 209.091px);
+    min-height: 0;
+    position: relative;
+    overflow: hidden;
+    background: #ff8a24;
+  }
+  .hero-art > img {
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 180%;
+    height: auto;
+    min-height: 0;
+    object-fit: initial;
+    object-position: top center;
+  }
+  .hero-copy {
+    position: absolute;
+    z-index: 2;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    color: #fff;
+  }
+  .hero-kicker {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .hero-copy h1 {
+    font-size: clamp(30px, 7.8vw, 40px);
+    line-height: 1.2;
+    margin: 16px 0 0;
+    transform: none;
+    letter-spacing: 0;
+  }
+  .hero-copy p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 14px 0 0;
+    transform: none;
+  }
+  .hero .hero-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin: 20px 0 0;
+    padding: 0;
+    transform: none;
+  }
+  .hero .hero-actions .btn {
+    min-width: 0;
+    padding: 11px 13px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 380px) {
+  .hero-copy { left: 4%; right: 4%; }
+  .hero-copy h1 { font-size: 29px; }
+  .hero-copy p { font-size: 12px; }
+  .hero .hero-actions .btn { padding: 10px 10px; font-size: 10px; }
+}
+</style>
+
+
+<style id="tablet-hero-image-scale">
+@media (min-width: 761px) and (max-width: 1032px) {
+  .hero-art > img {
+    top: -150px;
+    left: -25%;
+    width: 150%;
+  }
+}
+</style>
+
+
+<style id="hero-copy-consistent-spacing">
+/* Keep the hero copy on one consistent vertical spacing system */
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.hero-copy h1,
+.hero-copy p,
+.hero .hero-actions {
+  margin: 0;
+  transform: none;
+}
+.hero-copy .hero-actions {
+  margin-top: 20px;
+}
+</style>
+
+
+<style id="hero-background-shift-left-30">
+/* Desktop: move left while extending the image to prevent an empty right edge */
+@media (min-width: 1033px) {
+  .hero-art > img {
+    left: -30px;
+    width: calc(100% + 30px);
+  }
+}
+@media (max-width: 760px) {
+  .hero-art > img { left: calc(-40% - 30px); }
+}
+@media (min-width: 761px) and (max-width: 1032px) {
+  .hero-art > img { left: calc(-25% - 30px); }
+}
+</style>
+
+
+<style id="hero-fluid-height-desktop-tablet">
+/* Desktop/tablet retain the existing width-responsive clamp height. */
+@media (min-width: 761px) {
+  .hero-art { height: calc(clamp(900px, 58vw, 1120px) + 50px); }
+}
+</style>
+
+
+<style id="tablet-hero-height-adjustment">
+/* Tablet hero: reduce the overall section height by 100px from the current rule. */
+@media (min-width: 761px) and (max-width: 1032px) {
+  .hero-art {
+    height: calc(clamp(900px, 58vw, 1120px) - 50px);
+  }
+}
+</style>
+
+
+<style id="tablet-hero-fluid-height-endpoints">
+/* Tablet hero height interpolates smoothly: 761px viewport -> 761px height,
+   1032px viewport -> 1032px height. */
+@media (min-width: 761px) and (max-width: 1032px) {
+  .hero-art {
+    height: 100vw;
+    min-height: 0;
+  }
+}
+</style>
+
+
+<style id="mobile-hero-fluid-height-endpoints">
+/* Mobile hero height interpolates smoothly: 320px viewport -> 500px height,
+   760px viewport -> 760px height. */
+@media (max-width: 760px) {
+  .hero-art {
+    height: calc(90.9091vw + 209.091px);
+    min-height: 0;
+  }
+}
+</style>
+
+
+<style id="pricing-section-redesign-v16">
+/* 4FACT VMS pricing: clear plan comparison + separate license add-ons */
+#price .pricing-heading {
+  display:flex;
+  justify-content:flex-start;
+  margin:54px 0 0;
+  padding-bottom:22px;
+  border-bottom:1px solid #303030;
+}
+#price .pricing-heading-copy { display:flex; flex-direction:column; align-items:flex-start; gap:5px; }
+#price .pricing-overline {
+  color:var(--orange);
+  font-family:"Outfit",sans-serif;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+#price .pricing-heading h3,
+#price .license-heading h3 {
+  margin:0;
+  color:#f5f5f5;
+  font-size:27px;
+  line-height:1.25;
+  letter-spacing:-.035em;
+}
+#price .pricing-heading p,
+#price .license-heading p {
+  margin:3px 0 0;
+  color:#999;
+  font-size:14px;
+  line-height:1.6;
+}
+#price .pricing {
+  max-width:none;
+  width:100%;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  margin:22px auto 0;
+}
+#price .price {
+  min-height:230px;
+  padding:28px;
+  background:linear-gradient(145deg,#202020,#191919);
+  border:1px solid #333;
+  border-radius:16px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  text-align:left;
+  transition:border-color .25s ease, transform .25s ease, background .25s ease;
+}
+#price .price h3 {
+  margin:0 0 17px;
+  color:#fff;
+  font-size:25px;
+  line-height:1.2;
+  letter-spacing:-.035em;
+}
+#price .plan-features {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:8px;
+  min-height:0;
+  margin:0;
+}
+#price .plan-features span {
+  display:block;
+  position:relative;
+  padding:0 0 0 14px;
+  background:none;
+  border-radius:0;
+  color:#bdbdbd;
+  font-size:14px;
+  line-height:1.45;
+}
+#price .plan-features span::before {
+  content:"";
+  position:absolute;
+  left:0;
+  top:.55em;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--orange);
+}
+#price .price-value {
+  display:flex;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:auto;
+  padding-top:25px;
+}
+#price .price strong {
+  display:inline;
+  margin:0;
+  color:var(--orange);
+  font-size:30px;
+  line-height:1.15;
+  letter-spacing:-.045em;
+}
+#price .price-value span {
+  color:#aaa;
+  font-size:13px;
+}
+#price .license {
+  display:block;
+  width:100%;
+  max-width:none;
+  margin:42px auto 0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+#price .license-heading {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:5px;
+  margin-bottom:20px;
+}
+#price .license-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+#price .license-card {
+  min-height:116px;
+  padding:22px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  background:#1d1d1d;
+  border:1px solid #303030;
+  border-radius:14px;
+  text-align:left;
+}
+#price .license-description {
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+#price .license-description strong {
+  color:#f5f5f5;
+  font-size:19px;
+  line-height:1.25;
+  letter-spacing:-.025em;
+}
+#price .license-description span {
+  color:#999;
+  font-size:13px;
+  line-height:1.45;
+}
+#price .license-price {
+  display:flex;
+  align-items:baseline;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+  gap:5px;
+  white-space:nowrap;
+}
+#price .license-price strong {
+  display:inline;
+  margin:0;
+  color:var(--orange);
+  font-size:24px;
+  line-height:1.2;
+  letter-spacing:-.04em;
+}
+#price .license-price span {
+  color:#aaa;
+  font-size:12px;
+}
+#price .pricing-notes {
+  margin:20px 0 0;
+  padding-top:15px;
+  border-top:1px solid #303030;
+  color:#929292;
+  font-size:12px;
+  line-height:1.7;
+}
+#price .pricing-notes p { margin:3px 0; }
+@media (hover:hover) and (pointer:fine) {
+  #price .price:hover {
+    border-color:var(--orange);
+    background:linear-gradient(145deg,#252525,#1c1c1c);
+    transform:scale(1.01);
+    transform-origin:center center;
+    position:relative;
+    z-index:2;
+  }
+  #price .license-card:hover { border-color:#555; }
+}
+@media(max-width:900px) {
+  #price .price { padding:23px 20px; }
+  #price .price h3 { font-size:23px; }
+  #price .price strong { font-size:26px; }
+  #price .license-card { padding:20px; gap:12px; }
+  #price .license-price strong { font-size:22px; }
+}
+@media(max-width:700px) {
+  #price .pricing-heading { margin-top:40px; padding-bottom:17px; }
+  #price .pricing-heading h3,
+  #price .license-heading h3 { font-size:24px; }
+  #price .pricing-heading p,
+  #price .license-heading p { font-size:13px; }
+  #price .pricing { grid-template-columns:1fr; margin-top:16px; gap:10px; }
+  #price .price { min-height:0; padding:21px 22px; }
+  #price .price h3 { margin-bottom:12px; font-size:22px; }
+  #price .plan-features { gap:6px; }
+  #price .plan-features span { font-size:13px; }
+  #price .price-value { padding-top:18px; }
+  #price .price strong { font-size:26px; }
+  #price .license { margin-top:32px; }
+  #price .license-heading { margin-bottom:15px; }
+  #price .license-grid { grid-template-columns:1fr; gap:10px; }
+  #price .license-card { min-height:100px; padding:19px 20px; }
+  #price .license-description strong { font-size:18px; }
+  #price .license-price strong { font-size:22px; }
+  #price .pricing-notes { margin-top:16px; font-size:11px; }
+}
+@media(max-width:390px) {
+  #price .license-card { align-items:flex-start; flex-direction:column; gap:12px; }
+  #price .license-price { justify-content:flex-start; }
+}
+@media(prefers-reduced-motion:reduce) {
+  #price .price { transition:none; }
+}
+</style>
+
+
+
+
+
+<style id="pricing-feature-checkmarks-v17">
+/* Replace orange bullet dots with clean check marks */
+#price .plan-features span {
+  padding-left: 21px;
+}
+#price .plan-features span::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  color: var(--orange);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+</style>
+
+</body></html>
